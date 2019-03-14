@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>COS332: Practical assignment 1</title>
+  <link rel=stylesheet href="kurs.css" type="text/css">
+</head>
+<body>
+<h2 class="up">University of Pretoria</h2>
+<h1>COS 332</h1>
+<h2>Instantiation of a virtual computer for COS332 assigments</h2>
+<h3>2019</h3>
+
+<h1>This is a pre-release of this page.  It still needs to be
+edited for language</h1>
+
+<h3>Virtual machines</h3>
+<p>Network services are provided by servers that are accessed by
+clients.  In some cases servers talk to one another in order to
+complete a request.</p>
+
+<p>The term <em>server</em> is used with two distinct meanings.
+One the one hand a server may be a computer which runs the
+necessary software to service requests.  On the other hand a
+server may be the software running on such a computer.  Where
+necessary, we will refer to the computer as a <em>host</em> and
+the specific software as a <em>daemon</em> (though both terms
+need further disambiguation to use them correctly).</p>
+
+<p>To illustrate, consider a company who buys a computer to use
+as 'server' and then installs software on it to serve Web pages,
+handle email and act as an FTP repository.  They may refer to
+this computer as the 'server'.  The software that handles Web
+requests will often be <span class="tt">httpd</span>, where the <span class="tt">http</span>
+part indicates that it deals with the HTTP protocol, and the
+<span class="tt">d</span> suffix indicated that it is the daemon (server) for
+this protocol.  Similarly, FTP requests may be handled by a
+program called <span class="tt">ftpd</span> - for similar reasons.  On the other
+hand, the daemon used to forward email may be <span class="tt">sendmail</span>,
+without any suffix to indicate that it is in fact a daemon.</p>
+
+<p>In this module you will be expected to develop software that,
+in some cases, work as daemons to be used by specific client
+software.  The client software will be readily available; since
+you will develop the daemon, you will have everything you require
+to complete a working system.</p>
+
+<p>In other cases you will be expected to write client software
+that should communicate with a daemon.  Unfortunately for this
+module (but generally fortunately) organisations restrict access
+to their servers.  Hence you will need to supply your own server.
+This practical assignment is intended to guide you through the
+process of setting up your own server.</p>
+
+<p>In order to create your own server you will need a computer
+and a disc.  VirtualBox should be installed on the computers in
+the Informatorium.  To install VirtualBox on your own computer,
+you can download it from <a
+    href="https://www.virtualbox.org">virtualbox.org</a>.</p>
+
+<p>We will use the server edition of <span class="tt">Ubuntu 18.04.1 LTS</span>
+as the operating system of our virtual host.  The system may be
+downloaded from the
+<a href="http://ubuntu.mirror.ac.za/ubuntu-cdimage/releases/18.04.1/release/">
+TENET mirror</a>, which is lightning fast from campus and should
+incur costs against your Internet account.  The file you want is
+(probably) <span class="tt">ubuntu-18.04.1-server-amd64.iso</span>.  It requires
+about 7.5MB of storage.</p>
+
+<p>As noted, you also need a disc for your host.  Any USB drive
+that can hold a file of about 16GB should work fine.  (The
+contents of this drive will not be erased; a new set of files
+will simply be added.)  Proceed to install the operating system
+on this removable disc after you created a new virtual machine
+with VirtualBox.  Do not install any of the servers (daemons)
+that the installation process offers to install.  Note that this
+installation process takes a few minutes that tend to feel longer
+than it is.  Also be prepared to repeat the installation if
+necessary - such processes do not always proceed as planned.
+There are copious amounts of information available on the Web
+that should guide you through any problems you encounter.</p>
+
+<p>Be aware of the different uses of the term <em>host</em> in
+networking in general, and in VirtualBox.  In networking a host
+is simply a computer connected to a network (possibly acting as a
+server).  In VirtualBox, the computer that you create is known as
+a <em>guest</em>, which is 'hosted' on the physical computer.
+Hence, our Ubuntu computer will in VirtualBox be known as the
+guest, while the real computer (possibly running Windows) will be
+known as the <em>host</em>.  Install your virtual computer with
+netwoking configured such that the host (Windows?) can talk to
+your Ubuntu computer.  If possible, other real computers on the
+network should also be able to talk to your Ubuntu computer.
+For details, read more about ``virtual networking'' on
+VirtualBox.  To repeat: In this context you want the host to be
+able to talk to the guest.  The guest should also be able to talk
+to the host, but that is not a challenge.</p>
+
+<p>Note that, after you have set up your network adapter, we will
+revert to talking about our Ubuntu computer as the host.</p>
+
+<p>Once your installation is complete, you should be able to boot
+your virtual host, and log in.  To shut it down, simply enter the
+following command:</p>
+
+<p><span class="tt">sudo shutdown -h now</span></p>
+
+<p>To boot your host on another (physical) computer you may have
+to create a new virtual machine, pointing to the disc you already
+have.  It's best to try it early in the process to be certain
+that you can retrieve your host whenever required.</p>
+
+
+
+
+<p class="endmatter">
+[<a href="index.htm">Home</a>]<br>
+Page maintained by
+<a href="http://mo.co.za/">
+MS Olivier</a><br>
+Last update: 11 February 2019: Pre-release posted
+</p>
+</body>
+</html>
+
+
+
+
+
+
+

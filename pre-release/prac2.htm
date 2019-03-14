@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>COS332: Practical assignment 2</title>
+  <link rel=stylesheet href="kurs.css" type="text/css">
+</head>
+<body>
+<h2 class="up">University of Pretoria</h2>
+<h1>COS 332</h1>
+<h2>Practical assignment 2</h2>
+<h3>2019</h3>
+
+<h1>This is a pre-release of this page.  It still needs to be
+edited for language</h1>
+
+<ul>
+ <li>Upload deadline: 11:00 on Monday 4/3/2019
+ <li>Demonstration session: The first Tuesday or Thursday
+     practical session following the upload deadline
+ <li>You and <em>one</em> colleague may cooperate to complete this
+     assignment
+</ul>
+
+<h3>Background</h3>
+<p>A Telnet client is available for all well-known operating systems.
+To activate it, one simply enters the command<br>
+&nbsp;<span class=tt>telnet computer port</span></p>
+
+<p>The Telnet client is in the first place meant for communication with
+a Telnet server.  One may, for example, use Telnet to work on a Unix
+computer located in any place in the world as if one were working from
+a terminal directly connected to the computer.  (We will cover this
+aspect later in the course.) Telnet may, however, communicate with any
+server.  Essentially it simply sends each character that is entered on
+the keyboard to the server and displays each character that the server
+sends to the client on the screen.  (In the basic configuration even
+the characters typed on the keyboard are not displayed, but sent to the
+server which 'echoes' each character so that one sees what one types.
+This has the advantage that one knows while you are communicating with
+the server since each character that one sees has been sent to the
+server and returned by it.)</p>
+
+<h3>The assignment</h3>
+<p>You are expected to write a server that maintains a 'database'
+(such as an array read from and written to file) of
+friends and their telephone numbers.  All the usual operations such as
+searching, addition, deletion, etcetera, must be available.  After your
+server has been activated, <em>all</em> interaction with it has to occur
+through Telnet.  Your server is also responsible to echo everything
+that is entered.</p>
+
+<p>To make your program more visually pleasing, you may use ANSI escape
+sequences that are supported by ANSI and VT100 (and other) emulations.
+Two of the more useful ANSI escape sequences are:</p>
+<ul>
+ <li> <span class=tt>ESC[2J</span> to clear the screen; and
+ <li> <span class=tt>ESC[y;xH</span> to move the cursor to position
+      <span class=tt>(x,y)</span> on the screen;
+</ul>
+<p>Here <span class=tt>ESC</span> is ASCII character 27 and <span class=tt>x</span> and <span class=tt>y</span>
+are numbers in string format.  If <span class=tt>screen</span> is a suitable Java
+stream object is, the<br>
+&nbsp;<span class=tt>screen.write( 27 );</span><br>
+&nbsp;<span class=tt>screen.print( "[20;5HHello" );</span><br>
+will display the message <span class=tt>Hello</span> in line 5 from position 20 on
+the screen.  Experiment to ensure that you understand the concept
+before you write your program.  (Naturally the best solution is to
+write your own class and methods to hide this level of detail for the
+rest of your program.)</p>
+
+<p>Remember that your program is a server that is to be used via the
+network.   After you have activated the server, all interaction with the
+server has to occur via Telnet.</p>
+
+<p>A working program (that uses screen control) will earn 8 out of 10. To earn higher marks your program will be expected to do more than just the basics, such as to allow more than one user to use your program simultaneously or to simply use colour.</p>
+
+<p class="endmatter">Page maintained by
+<a href="http://mo.co.za/">
+MS Olivier</a><br>
+Last update: 11 February 2019: Pre-release posted
+</p>
+</body>
+</html>

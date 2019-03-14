@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>COS332: Practical assignment 6</title>
+  <link rel=stylesheet href="kurs.css" type="text/css">
+</head>
+<body lang="en">
+<h2 class="up">University of Pretoria</h2>
+<h1>COS 332</h1>
+<h2>Practical assignment 6</h2>
+<h3>2019</h3>
+
+<h1>This is a pre-release of this page.  It still needs to be
+edited for language</h1>
+
+<ul>
+ <li>Upload deadline: 11:00 on Monday 15/4/2019
+ <li>Demonstration session: The first Tuesday or Thursday
+     practical session following the upload deadline
+ <li>You and <em>one</em> colleague may cooperate to complete this
+     assignment
+</ul>
+
+<h3>Background</h3>
+<p>Most personal computers receive e-mail using the POP3 protocol
+<em>(Post Office Protocol 3)</em> and send mail by using the SMTP
+protocol <em>(Simple Mail Transfer Protocol)</em>.</p>
+
+<p>The SMTP protocol (RFC 821) is a rather old protocol (it dates from
+1982) but is still commonly used - in some cases with a few extensions.
+The basic operation of the protocol is explained in your
+textbook, but you will have to read parts of the RFC to
+understand the operation better.   Try to grasp at least the following
+commands:</p>
+<pre>
+HELO
+MAIL
+RCPT
+DATA
+QUIT
+</pre>
+
+<p>The SMTP server usually listens to TCP port 25.   The computer
+<span class=tt>mail.cs.up.ac.za</span> has such a server listening to port 25.</p>
+
+<p>Note that SMTP servers often place restrictions on who may use it to
+send mail or to whom mail may be sent via it.   If neither the sender,
+nor the recipient has anything to do with the server one often gets the
+message <span class=tt>We do not relay</span>.   This is to prevent cowards who want
+to send junk mail via another organisation's computer from hiding their
+identities.   If you use a dial-up connection, you will therefore have
+to use the SMTP server of your service provider; UP's server may (with
+good reason) refuse to accept mail directly from such a foreign
+network.</p>
+
+<p>Mail that is transferred via SMTP may, in principle, consist of any
+text.   (See RFC 821 for more details.)   However, if you want to use
+headings (such as <em>Subject</em>), look at RFC 561 (from 1973!).
+(These old standards often refer to protocols that no one knows anymore
+- just ignore such references.)</p>
+
+<p>To complete this assignment you will need to find or install an email server on your <a href="prac0.htm">virtual computer</a>.  Just upload your own program to the Computer Science server.  Indicate which email server you have used as a comment at the top of your (main) program file.</p>
+
+<h3>Your assignment</h3>
+<p>Assume your house has a permanent Internet connection.   Then it is
+possible to link your alarm system such that it sends you e-mail
+whenever it becomes suspicious.   (It is, after all, possible to send
+e-mail to a cell phone so that you are informed immediately when there
+is a problem.)</p>
+
+<p>Write a program that simulates such an alarm system.   Assume that the
+sensors are connected to keys on the keyboard and that movement or a door
+that opens causes contact to be made on the keyboard as if a specific
+key has been pressed.   Your program then has to send a suitable e-mail
+message to your personal address.   You have to be able to show that the
+message has indeed reached the target mailbox.</p>
+
+<p>A working program will be awarded 8 out of 10.   To earn a higher
+mark your program has to do more than just the basics - in particular
+should it demonstrate that you understand something of the RFCs.</p>
+
+<p class="endmatter">Page maintained by
+<a href="http://mo.co.za/">
+MS Olivier</a><br>
+Last update: 11 February 2019: Pre-release posted
+</p>
+</body>
+</html>

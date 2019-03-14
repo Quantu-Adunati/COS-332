@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>COS332: Practical assignment 3</title>
+  <link rel=stylesheet href="kurs.css" type="text/css">
+</head>
+<body>
+<h2 class="up">University of Pretoria</h2>
+<h1>COS 332</h1>
+<h2>Practical assignment 3</h2>
+<h3>2019</h3>
+
+<h1>This is a pre-release of this page.  It still needs to be
+edited for language</h1>
+
+<ul>
+ <li>Upload deadline: 11:00 on Monday 11/3/2019
+ <li>Demonstration session: The first Tuesday or Thursday
+     practical session following the upload deadline
+ <li>You and <em>one</em> colleague may cooperate to complete this
+     assignment
+</ul>
+
+<h3>Background</h3>
+<p>The HTTP protocol is used to transfer packets between a Web server
+and a Web client (or browser, such as <em>Opera</em> or
+<em>Safari</em>).   Normally these packets contain data
+encoded in HTML.</p>
+
+<p>The Web client marks all the links (indicated in HTML with <span class=tt>&lt;a href=
+...&gt; ...  &lt;/a&gt;</span>) by underlining it and/or displaying it in a
+different colour.   When one clicks on the marked link, an HTTP request
+is sent to the server concerned to fetch the concerned page.   The
+format of such an HTTP request to fetch, for example, <span class=tt>/index.htm</span>
+from <span class=tt>www.cs.up.ac.za</span>, is as follows:<br>
+<span class=tt>&nbsp;&nbsp;GET /index.htm HTTP/1.1<br></span>
+<span class=tt>&nbsp;&nbsp;Host: www.cs.up.ac.za<br></span>
+Each line is followed by a CR character (ASCII 13).   When one enters a
+URL at the Web client, a similar <span class=tt>GET</span> request is sent to the
+server.</p>
+
+<p>When the server receives a <span class=tt>GET</span> request it simply sends the
+required data to the client as a stream of characters.   Normally the
+stream of data will contain HTML encoded data that will be interpreted
+by the Web client.</p>
+
+<p>Note that the server may also receive requests other than
+<span class=tt>GET</span>; technically it is supposed to respond at least to the
+<span class=tt>GET</span> and <span class=tt>HEAD</span> requests.  (The latter request is not
+considered further in this assignment.)</p>
+
+<p>The description of HTTP given above has obviously been
+oversimplified, but it is sufficient for this exercise.   Those who
+require more information may consult RFC 2616.   (It consists of 176
+pages in the text version, so do not procrastinate.)</p>
+
+<p>Note that this assignment is an example of a case where you will develop your own Web server  and not use Apache.  Recall that active Web pages are not allowed.</p>
+
+<h3>Your assignment</h3>
+<p>Write a program that emulates a calculator: It should display all ten
+digits, the four common operators and the answer thus far.   The program
+itself should, however, not do its own displaying, but operate as a
+server that uses a browser to display all its interaction.</p>
+
+<p>The (simplified) process will therefore be as follows: One should
+select a port - say 55555.   Then one should activate the server that
+listens to this port.   After that, one activates <em>Chrome</em> or
+<em>Firefox</em> and enters <span class=tt>http://127.0.0.1:55555</span>
+as the URL - if the server executes on the local computer.   This will
+cause a <span class=tt>GET</span> to be sent to the server which should then respond
+with the appropriate data - in HTML format.   Each digit or operator
+should be a link and each click on such a link will then send a
+<span class=tt>GET</span> to the server, which should respond appropriately.
+
+<p>A working program will be awarded 8 out of 10.   To earn a higher
+mark your program has to do more than just the basics - in particular
+should it demonstrate that you understand something of the RFC.</p>
+
+<p class="endmatter">Page maintained by
+<a href="http://mo.co.za/">MS Olivier</a><br>
+Last update: 11 February 2019: Pre-release posted
+</p>
+</body>
+</html>

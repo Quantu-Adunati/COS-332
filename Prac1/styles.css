@@ -1,0 +1,120 @@
+html{
+    background: url("b4.png");  
+}
+.list
+{
+    text-align: center;
+    margin-top:150px;
+    margin-bottom: 200px;
+    height: 700px;   
+}
+p
+{
+    color:Black;
+    font-family: "Righteous";
+}
+ul{
+    color:black;
+}
+.par{ 
+   width:700px;
+   color:white;
+   padding-left:500px;
+   
+}.parTwo{ 
+    width:700px;
+    color:white;
+    padding-left:600px;
+ }
+ .parThree{ 
+    width:700px;
+    color:white;
+    padding-left:700px;
+ }
+.par2
+{
+   color:black;
+}
+.ForLast
+{
+   background-color: lightgray;
+   opacity: 0.7;
+}
+.inside
+{
+    /*text-align: center;*/
+    padding-left:450px;
+}
+.name
+{
+    color:#06f74e;
+    /*#66FCF1;*/
+    font-size: 70px;  
+}
+.nameMiddle
+{
+    color:#9b0404;
+    font-size: 70px;  
+    text-align: center; 
+    padding-top:200px;
+}
+.number
+{
+    color:#9b0404;
+    font-size: 40px;
+}
+.container
+{
+    color:white;
+    padding :10px;
+    background: url("b.jpg");
+    min-height: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.button
+{
+    display:table;
+}
+.paralaxTwo
+{
+    background: url("b2.jpg");
+    min-height: 300px;
+    max-height:600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.paralaxThree
+{
+    background: url("b3.png");
+    min-height: 300px;
+    max-height: 600px;
+    margin-bottom:100px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.rightFloat
+{
+    float:right;
+    height:200px;
+    padding-right:200px;
+}
+.floatLeft
+{
+    float:left;
+    height:200px;
+    padding-left:200px;
+}
+.buttonForImage
+{
+    height:250px;
+    margin: auto;
+}
+.me{
+    height:500px;
+    width:500px;
+    border-radius: 400px;
+}
